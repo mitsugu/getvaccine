@@ -1,0 +1,4 @@
+#! /bin/sh
+wget https://vrs-data.cio.go.jp/vaccination/opendata/latest/summary_by_date.csv
+mv summary_by_date.csv general.csv
+

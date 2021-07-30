@@ -1,0 +1,5 @@
+#! /bin/sh
+wget http://www.kantei.go.jp/jp/content/vaccination_data5.xlsx
+xlsx2csv -i 2 vaccination_data5.xlsx | sort | sed '1,6d' | sed -e "s/\;/\,/g" | head -n -5 > medical.csv
+rm vaccination_data5.xlsx
+
